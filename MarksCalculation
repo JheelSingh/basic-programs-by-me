@@ -1,0 +1,48 @@
+MarksCalculation.java
+import java.util.*;
+public class MarksCalculation
+{
+    int mm=0,pm=0,r=0,cm=0,avg=0;
+    double per=0.0;
+    String n=" ";
+    void accept()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter student's name : ");
+        String n=sc.nextLine();
+        System.out.println("Enter student's roll number : ");
+         r=sc.nextInt();
+        System.out.println("Enter the marks of maths : ");
+         mm=sc.nextInt();
+        System.out.println("Enter the marks of physics : ");
+         pm=sc.nextInt();
+        System.out.println("Enter the marks of chemistry : ");
+         cm=sc.nextInt();
+    }
+    void calculate()
+    {
+        
+        double per=0.0;
+        avg=mm+pm+cm;
+        per=((pm+cm+mm)/3)*100;
+    }
+    void display()
+    {
+        System.out.println("NAME OF THE STUDENT : " + n);
+        System.out.println("ROLL NUMBER OF THE STUDENT : " + r);
+        System.out.println("MATHS MARKS : " + mm);
+        System.out.println("PHYSICS MARKS : " + pm);
+        System.out.println("CHEMISTRY MARKS : " + cm);
+        System.out.println("AVERAGE : " + avg);
+        System.out.println("PERCENTAGE : " + per);
+        
+    }
+    public static void main(String args [])
+    {
+        MarksCalculation ob=new MarksCalculation();
+        ob.accept();
+        ob.calculate();
+        ob.display();
+}
+}    
+Add MarksCalculation Java program
