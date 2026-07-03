@@ -1,0 +1,66 @@
+ElectricityBillCal.java
+import java.util.*;
+public class ElectricityBillCal
+{
+    String n=" ";
+    int cno=0;
+    double bill=0.0;
+    int un=0;
+    void accept()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter customer's name");
+        n=sc.nextLine();
+        System.out.println("Enter consumer number");
+        cno=sc.nextInt();
+        System.out.println("Enter number of units consumed");
+        un=sc.nextInt();
+    }
+    void calculate()
+    {
+
+
+    if(un <= 100)
+    {
+        bill = un * 2.50;
+    }
+    else if(un <= 300)
+    {
+        bill = (100 * 2.50) + ((un - 100) * 4.00);
+    }
+    else
+    {
+        bill = (100 * 2.50) + (200 * 4.00) + ((un - 300) * 5.50);
+    }
+
+    if(bill > 1500)
+    {
+        bill = bill + (bill * 0.10);
+    }
+}
+    void display()
+    {
+        System.out.println("--------------Electricity Bill---------------");
+        System.out.println("Customer's name : " + n);
+        System.out.println("************************");
+
+        System.out.println("Customer's consumer number : " + cno);
+        System.out.println("***************************************");
+
+        System.out.println("Number of units consumed by customer : " + un);
+        System.out.println("***********************************************");
+        
+        System.out.println("Bill to be paid : " + bill);
+        System.out.println("-------------------------------------------------");
+
+    }
+    public static void main(String args[])
+    {
+        ElectricityBillCal ob=new ElectricityBillCal();
+        ob.accept();
+        ob.calculate();
+        ob.display();
+        
+    }
+}
+Add ElectricityBillCal Java program
