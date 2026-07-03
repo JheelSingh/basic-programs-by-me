@@ -1,0 +1,57 @@
+# Electricity Bill Calculator
+
+A Java program that calculates an electricity bill based on slab-wise tariff rates using Object-Oriented Programming (OOP) concepts.
+
+## Features
+
+- Accepts customer name and consumer number
+- Accepts the number of electricity units consumed
+- Calculates the electricity bill using slab-wise rates
+- Applies a 10% surcharge if the bill exceeds ₹1500
+- Displays customer details and the final bill amount
+
+## Concepts Used
+
+- Java
+- Classes and Objects
+- Methods
+- Conditional Statements (`if-else`)
+- User Input using `Scanner`
+- Arithmetic Operations
+
+## Tariff Rates
+
+| Units Consumed | Rate per Unit |
+|---------------|---------------:|
+| First 100 units | ₹2.50 |
+| Next 200 units (101–300) | ₹4.00 |
+| Above 300 units | ₹5.50 |
+
+## How to Run
+
+1. Compile the program:
+   ```bash
+   javac ElectricityBillCal.java
+   ```
+
+2. Run the program:
+   ```bash
+   java ElectricityBillCal
+   ```
+
+3. Enter the required customer details.
+
+## Sample Output
+
+```text
+========== ELECTRICITY BILL ==========
+
+Customer's Name         : Jheel
+Consumer Number         : 1056
+Units Consumed          : 350
+Bill to be Paid         : ₹1325.00
+```
+
+## Author
+
+Jheel
