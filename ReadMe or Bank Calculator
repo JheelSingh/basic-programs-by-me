@@ -1,0 +1,71 @@
+# Bank Account Management System
+
+A Java-based Bank Account Management System developed using Object-Oriented Programming (OOP) concepts. This program allows users to create a bank account, deposit money, withdraw money, and view the updated account details.
+
+## Features
+
+- Accepts account holder details
+- Accepts an initial account balance
+- Deposits money into the account
+- Withdraws money from the account
+- Prevents withdrawal when the balance is insufficient
+- Displays updated account information
+
+## Concepts Used
+
+- Java
+- Classes and Objects
+- Methods
+- Instance Variables
+- Conditional Statements (`if-else`)
+- User Input using `Scanner`
+- Arithmetic Operations
+
+## How to Run
+
+1. Compile the program:
+
+   ```bash
+   javac BankAccount.java
+   ```
+
+2. Run the program:
+
+   ```bash
+   java BankAccount
+   ```
+
+3. Enter the required account details and transaction amounts when prompted.
+
+## Sample Output
+
+```text
+Enter Account Holder Name : Jheel
+Enter Account Number : 123456
+Enter Initial Balance : 5000
+
+Enter Deposit Amount : 1500
+Amount Deposited Successfully.
+
+Enter Withdrawal Amount : 2000
+
+----------------------------------------
+
+Account Holder : Jheel
+Account Number : 123456
+Current Balance : ₹4500.00
+
+----------------------------------------
+```
+
+## Future Improvements
+
+- Add multiple account support
+- Display transaction history
+- Validate invalid inputs
+- Add PIN authentication
+- Store account details using file handling
+
+## Author
+Jheel
+
