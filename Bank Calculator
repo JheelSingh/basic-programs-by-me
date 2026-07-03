@@ -1,0 +1,56 @@
+import java.util.*;
+public class BankAccount
+{
+    String n="";
+    int accno=0;
+    double balance=0.0,amt=0.0,amt2=0.0;
+    Scanner sc=new Scanner(System.in);
+    void accept()
+    {
+        System.out.println("===================================");
+        System.out.println("Enter the name of account holder");
+        n=sc.nextLine();
+        System.out.println("Enter the account number");
+        accno=sc.nextInt();
+        System.out.println("Enter Initial account balance ");
+        balance=sc.nextDouble();
+    } 
+    void deposit()
+    {
+        System.out.println("Enter the amount to be deposited ");
+        amt=sc.nextDouble();
+        balance=amt+balance;
+        System.out.println("======================================");
+        System.out.println("AMOUNT DEPOSITED SUCCESSFULLY");
+    }
+    void withdraw()
+    {
+        System.out.println("Enter the amount to be withdrawan ");
+        amt=sc.nextDouble();
+       if(amt<=balance)
+       {
+           balance-=amt;
+       }
+       else 
+       {
+           System.out.println("Insufficient Balance");
+       }
+    }
+    void display()
+    {
+        System.out.println("Name of account holder : " + n);
+                System.out.println("------------------------");
+        System.out.println("Account number : " + accno);
+                System.out.println("--------------------------");
+        System.out.println("Current balance : " + balance);
+                System.out.println("---------------------------");
+    }
+    public static void main(String args[])
+    {
+        BankAccount ob=new BankAccount();
+        ob.accept();
+        ob.deposit();
+        ob.withdraw();
+        ob.display();
+    }
+}
