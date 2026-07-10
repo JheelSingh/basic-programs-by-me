@@ -1,0 +1,61 @@
+import java.util.*;
+public class EmployeeSalary
+{
+
+ String name;           
+ int empId;                      
+ double bs,hra,da,tax,netsal,gs;
+ void accept()
+ {
+     Scanner sc=new Scanner(System.in);
+     System.out.println("Enter employee's name");
+     name=sc.nextLine();
+    System.out.println("Enter employee's id");
+     empId=sc.nextInt();
+     System.out.println("Enter employee's basic salary");
+     bs=sc.nextDouble(); 
+ }
+ void calculate()
+ {
+     hra=(20.0/100.0)*bs;
+     da=(15.0/100.0)*bs;
+     gs=bs+hra+da;
+     if(gs<=50000)
+     {
+         System.out.println("NO TAX " );
+     }
+     else if(gs>=50001 && gs<=100000)
+     {
+         tax=(10.0/100.0)*gs;
+     }
+        else if( gs>100000)
+     {
+         tax=(20.0/100.0)*gs;
+     }
+     netsal=gs-tax;
+ }
+ void display()
+ {
+     System.out.println("------------------------------------------------------");
+    System.out.println("Employee name : " + name);
+    System.out.println("Employee id : " + empId);
+    System.out.println("Basic salary : " + bs);
+     System.out.println("HRA  : " + hra);
+    System.out.println("DA : " + da);
+    System.out.println("Gross salary : " + gs);
+    System.out.println("Income tax : " + tax);
+    System.out.println("Net Salary : " + netsal);
+
+     System.out.println("------------------------------------------------------");
+
+
+
+ }
+ public static void main(String args[])
+ {
+     EmployeeSalary ob=new EmployeeSalary();
+     ob.accept();
+     ob.calculate();
+     ob.display();
+ }
+}
