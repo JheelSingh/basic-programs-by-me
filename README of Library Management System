@@ -1,0 +1,17 @@
+# Library Management System
+
+A Java program that manages library records by accepting student and book details and calculating the fine based on the number of late days.
+
+## Features
+
+- Accepts student and book details
+- Calculates late fine
+- Displays library record
+
+## Language
+
+Java
+
+## Author
+
+Jheel
