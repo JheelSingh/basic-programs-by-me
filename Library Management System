@@ -1,0 +1,67 @@
+import java.util.*;
+public class LibraryManagementSystem
+{
+    String name,bookname;           
+    int bookId,dayslate;                      
+    double fine;
+    void accept()
+  {
+     Scanner sc=new Scanner(System.in);
+     System.out.println("Enter student's name");
+     name=sc.nextLine();
+    
+     System.out.println("Enter book id");
+     bookId = sc.nextInt();
+
+     System.out.println("Enter book's name");
+     bookname = sc.nextLine();
+     
+     System.out.println("Enter number of day's late");
+     dayslate=sc.nextInt();
+     
+ }
+ void calculate()
+ {
+     
+     if(dayslate==0)
+     {
+         System.out.println("NO FINE TO BE PAID " );
+     }
+     else if(dayslate<=5)
+     {
+         fine=5.0*dayslate;
+     }
+        else if( dayslate>=6 && dayslate<=10)
+     {
+         fine=10.0*dayslate;
+     }
+     else if(dayslate>10)
+     {
+         fine=15.0*dayslate;
+        }
+     }
+     
+ 
+ void display()
+ {
+     System.out.println("------------------------------------------------------");
+    System.out.println("Student's name : " + name);
+    System.out.println("Book's id : " + bookId);
+    System.out.println("Book's name : " + bookname);
+     System.out.println("Number of days late  : " + dayslate );
+    System.out.println("Fine to be paid : " + fine);
+    
+
+     System.out.println("------------------------------------------------------");
+
+
+
+ }
+ public static void main(String args[])
+ {
+     LibraryManagementSystem ob=new LibraryManagementSystem();
+     ob.accept();
+     ob.calculate();
+     ob.display();
+ }
+}
