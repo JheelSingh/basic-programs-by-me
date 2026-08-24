@@ -1,0 +1,79 @@
+import java.util.*;
+public class StudentResult
+{
+    String name;
+    int rn,m,ph,ch,cs,eng,total;
+    double per;
+    char grade;
+    void accept()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("ENTER NAME");
+        name=sc.nextLine();
+        System.out.println("ENTER ROLL NO");
+        rn=sc.nextInt();
+        System.out.println("ENTER MARKS IN MATHS");
+        m=sc.nextInt();
+         System.out.println("ENTER MARKS IN PHYSICS");
+        ph=sc.nextInt(); 
+         System.out.println("ENTER MARKS IN CHEMISTRY");
+        ch=sc.nextInt();
+         System.out.println("ENTER MARKS IN COMPUTER");
+        cs=sc.nextInt(); 
+        System.out.println("ENTER MARKS IN ENGLISH");
+        eng=sc.nextInt();
+        
+    }
+    void calculate()
+    {
+        if(per>=90)
+        {
+            System.out.println("GRADE IS A");
+        }
+        else if(per>=75 && per<=89)
+        {
+            System.out.println("GRADE IS B");
+        }
+         else if(per>=75 && per<=89)
+        {
+            System.out.println("GRADE IS B");
+        }
+         else if(per>=60 && per<=74)
+        {
+            System.out.println("GRADE IS C");
+        } else if(per>=50 && per<=59)
+        {
+            System.out.println("GRADE IS D");
+        } else if(per<50)
+        {
+            System.out.println("GRADE IS E");
+        }
+        total=ph+m+ch+cs+eng;
+        per=(total/100)*5;
+        
+    }
+    void display()
+    {
+        System.out.println("-------------------------------");
+        System.out.println("STUDENT RESULT");
+        System.out.println("Name          :" + name);
+        System.out.println("Roll number   :"  + rn);
+        System.out.println("Maths         :"  + m);
+        System.out.println("Physics       :"  + ph);
+        System.out.println("Chemistry     :"  +  ch);
+        System.out.println("Computer      :"  + cs);
+        System.out.println("English       :"  + eng);
+        System.out.println("Total         :"  + total);
+        System.out.println("Percentage    :"  + per);
+
+        
+    }
+    public static void main(String args[])
+    {
+        StudentResult ob=new StudentResult();
+        ob.accept();
+        ob.calculate();
+        ob.display();
+        
+    }
+}
