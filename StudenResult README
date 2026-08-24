@@ -1,0 +1,24 @@
+# Student Result Management System
+
+A Java program that accepts a student's details and marks in five subjects, then calculates the total, percentage, grade, and result.
+
+## Features
+
+- Accepts student details and subject marks
+- Calculates total marks
+- Calculates percentage
+- Determines grade
+- Displays Pass or Fail result
+
+## Concepts Used
+
+- Java
+- Classes and Objects
+- Methods
+- `if-else` statements
+- User Input using `Scanner`
+- Arithmetic Operations
+
+## Author
+
+Jheel
