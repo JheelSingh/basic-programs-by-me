@@ -1,0 +1,64 @@
+import java.util.*;
+public class Quiz
+{
+    String name;
+    int score,ans;
+    Scanner sc=new Scanner(System.in);
+    void accept()
+    {
+     System.out.println("Enter the participant's name");
+     name=sc.nextLine();
+    }
+    void quiz()
+    {
+        System.out.println("-------QUESTIONS-------");
+        System.out.println("1.Which language is used for Android development");
+        System.out.println("Options :\n1. Java\n2. HTML\n3. CSS\n4. SQL");
+        ans=sc.nextInt();
+        if(ans==1)
+        {
+            score++;
+        }
+        System.out.println("2.Which of the following is used to style a webpage?");
+        System.out.println("Options :\n1. Java\n2. HTML\n3. CSS\n4. SQL");
+        ans=sc.nextInt();
+         if(ans==3)
+        {
+            score++;
+        }
+        System.out.println("3.Which keyword is used to create an object in Java?");
+        System.out.println("Options :\n1. class\n2. new\n3. object\n4. create");
+        ans=sc.nextInt();
+         if(ans==2)
+        {
+            score++;
+        }
+        System.out.println("4.Which symbol is used to end a statement in Java?");
+        System.out.println("Options :\n1. :\n2. .\n3. ;\n4. ,");
+        ans=sc.nextInt();
+         if(ans==3)
+        {
+            score++;
+        }
+        System.out.println("5.Which of these is NOT a Java primitive data type?");
+        System.out.println("Options :\n1. int\n2. double\n3. String\n4. char");
+        ans=sc.nextInt();
+         if(ans==3)
+        {
+            score++;
+        }
+    }
+    void display()
+    {
+        System.out.println(" PARTICIPANT : " + name);
+        System.out.println(" TOTAL QUESTIONS : 5");
+        System.out.println(" SCORE : " + score);
+    }
+    public static void main(String args[])
+    {
+        Quiz ob=new Quiz();
+        ob.accept();
+        ob.quiz();
+        ob.display();
+    }
+}
