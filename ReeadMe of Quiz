@@ -1,0 +1,27 @@
+# Quiz Application
+
+A Java-based Quiz Application that presents multiple-choice questions, accepts user answers, and calculates the final score.
+
+## Features
+
+* Accepts participant's name
+* Displays multiple-choice questions
+* Accepts answers from the user
+* Calculates the score
+* Displays the final score
+
+## Concepts Used
+
+* Java
+* Classes and Objects
+* Methods
+* `if-else` statements
+* `Scanner`
+* Escape Sequences (`\n`)
+* Arithmetic Operations
+
+
+
+## Author
+
+Jheel
